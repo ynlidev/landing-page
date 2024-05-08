@@ -1,0 +1,261 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+/* Typography
+--------------------------------------------- */
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #f8f5f5;
+  background-color: #221501;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 1em 0;
+  text-align: center;
+}
+
+/* Links
+--------------------------------------------- */
+
+a,
+a:visited {
+  color: #f74c4c;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+  color: burlywood;
+}
+
+a:focus {
+  outline: 2px dotted;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+/* Home Page */
+.site-header {
+  background-color: #0c0905;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.site-logo img {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.site-navigation ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+  background-color: #0c0905;
+}
+
+.site-navigation a {
+  display: block;
+  padding: 0rem;
+  text-decoration: none;
+  fill: #fffdfb;
+  color: #fffdfb;
+}
+
+.site-navigation ul {
+  display: none;
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #0c0905;
+}
+
+.menu-toggle {
+  display: block;
+  background-color: transparent;
+  border: 0;
+  padding: 1rem;
+  fill: #fffdfb;
+}
+
+.menu-toggle:focus {
+  border: 0;
+  outline: 1px dotted;
+}
+
+.site-navigation.toggled ul {
+  display: block;
+}
+
+@media (min-width: 43.75em) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-navigation {
+    padding: 0 1rem;
+    flex: 1 1 auto;
+  }
+
+  .site-navigation ul,
+  .site-navigation.toggled ul {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    top: 0;
+  }
+
+  .site-navigation a {
+    line-height: 4.5rem;
+    padding: 0 1rem;
+  }
+
+  .projects-title {
+    font-size: 54px;
+  }
+}
+
+/* Main
+--------------------------------------------- */
+/* Section:  About */
+.site-main {
+  display: block;
+  margin: auto;
+}
+.section-projects h3 {
+  text-align: center;
+}
+p {
+  text-align: center;
+  height: 7rem;
+}
+.section-introduction {
+  box-sizing: border-box;
+  padding-bottom: 1rem;
+  max-width: 18rem;
+  margin: 0 auto;
+}
+
+/* Section: projects */
+
+.section-projects {
+  display: block;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.projects-wrapper {
+  display: inline-block;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.projects-title {
+  padding-top: 4rem;
+}
+.projects {
+  box-shadow: 0 0 4px 3px rgb(160, 67, 14);
+  margin: 3rem;
+  max-width: 18.75rem;
+  margin: auto;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Section: footer */
+footer {
+  text-align: center;
+  height: 200px;
+  background-color: #0c0905;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.contact-me {
+  display: flex;
+  justify-content: center;
+  max-width: 10rem;
+  margin: 0 auto;
+}
+
+.contact-me img {
+  max-width: 3rem;
+  margin: 1rem 1rem;
+}
+
+.copyright {
+  height: 2.5rem;
+}
+/* desktop styles */
+
+@media (min-width: 50em) {
+  .section-introduction {
+    max-width: 70rem;
+    padding-top: 3rem;
+  }
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4rem;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .section-projects {
+    margin-top: 1rem;
+  }
+
+  .projects-title {
+    padding-top: 0;
+  }
+
+  .projects-title {
+    margin-top: 0;
+  }
+
+  .projects {
+    flex: 0 1 75%;
+    margin-top: 1rem;
+  }
+}
