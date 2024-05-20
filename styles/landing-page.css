@@ -23,8 +23,8 @@
 --------------------------------------------- */
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 200;
   color: #f8f5f5;
   background-color: #221501;
   min-height: 100vh;
@@ -95,7 +95,7 @@ a:focus {
   display: block;
   padding: 0rem;
   text-decoration: none;
-  fill: #fffdfb;
+  /* fill: #fffdfb; */
   color: #fffdfb;
 }
 
@@ -150,7 +150,7 @@ a:focus {
   }
 
   .projects-title {
-    font-size: 54px;
+    font-size: 40px;
   }
 }
 
@@ -166,7 +166,7 @@ a:focus {
 }
 p {
   text-align: center;
-  height: 7rem;
+  /* height: 7rem; */
 }
 .section-introduction {
   box-sizing: border-box;
@@ -184,7 +184,7 @@ p {
 }
 
 .projects-wrapper {
-  display: inline-block;
+  /* display: inline-block; */
   justify-content: space-around;
   padding: 2rem;
 }
